@@ -1,0 +1,97 @@
+@import "../../../styles/variables";
+
+.call-me {
+  position: relative;
+  .cm-content {
+    width: 500px;
+    height: 480px;
+    background-color: white;
+    box-shadow: $box-shadow;
+    padding: 40px;
+    margin-top: -20px;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .--text {
+      font-size: 20px;
+      color: $text;
+    }
+    * {
+      margin-bottom: 25px;
+      width: 100%;
+    }
+    .-title {
+      width: 100%;
+      font-size: 24px;
+      color: $text;
+      //text-align: left;
+    }
+    .-label {
+      text-align: left;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: gray;
+    }
+    input, textarea {
+      padding: 15px 20px;
+      box-sizing: border-box;
+      border: 1px solid lightgray;
+      outline: none;
+      transition: border 250ms ease-in-out;
+      font-size: 16px;
+      -webkit-appearance: none;
+      border-radius: 0;
+      &::placeholder {
+        color: gray;
+      }
+      &:focus {
+        border: 1px solid $primaryColor;
+        background-color: $primaryColor + 240;
+      }
+    }
+    input {
+      font-size: 18px;
+    }
+    textarea {
+      height: 140px;
+      resize: none;
+      min-height: 140px;
+      max-height: 140px;
+    }
+    .send-button {
+      background-color: $primaryColor;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      display: inline-flex;
+      cursor: pointer;
+      transition: all 250ms ease-in-out;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-sizing: border-box;
+      user-select: none;
+      margin-bottom: 0;
+      &:hover {
+        background-color: $primaryColor - 10;
+        box-shadow: 0 0 5px $primaryColor;
+      }
+    }
+  }
+  .-bg-dots {
+    margin-bottom: -20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .call-me {
+    width: 100%;
+    .cm-content {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40px 10px;
+      height: auto;
+    }
+  }
+}

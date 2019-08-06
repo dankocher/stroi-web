@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.button-call-me {
+  margin: 20px 0;
+  padding: 10px 25px;
+  background-color: $primaryColor;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  display: inline-flex;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  user-select: none;
+  &:hover {
+    background-color: $primaryColor - 10;
+    box-shadow: 0 0 5px $primaryColor;
+  }
+  .b-text {
+    margin-left: 15px;
+    user-select: none;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .button-call-me {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.--m.--desk.m-right {
+  width: 'calc(100% - '$left-width')';
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  .m-buttons {
+    display: inline-flex;
+    //height: 100%;
+    margin-right: 50px;
+    .m-b-dot {
+      display: inline-flex;
+      .menu-button {
+        user-select: none;
+        cursor: pointer;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+        font-size: 18px;
+        //color: lightgray;
+        color: white;
+        text-decoration: none;
+        padding: 0 1px;
+
+        &.-selected {
+          border-bottom: 2px solid $primaryColor;
+        }
+      }
+    }
+  }
+  .phone {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    .text {
+      font-size: 24px;
+      border-right: 1px solid rgba(128, 128, 128, 1);
+      padding-right: 7px;
+      margin-right: 7px;
+    }
+  }
+}

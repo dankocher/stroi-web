@@ -1,0 +1,153 @@
+@import '../../../../styles/variables';
+
+.services {
+  width: 100%;
+  min-width: $min-width;
+  max-width: $max-width + 20;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .service {
+    width: 1100px;
+    height: 400px;
+    //border: 1px solid gray;
+    margin: 50px 0;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    .s-image {
+      width: 500px;
+      height: 400px;
+      border: 10px solid $primaryColor;
+      z-index: 2;
+    }
+    .s-content {
+      z-index: 1;
+      background-color: white;
+      width: calc(100% - 500px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 25px 40px;
+      flex-direction: column;
+      margin-bottom: 20px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+      .-name {
+        font-size: 28px;
+        font-weight: bold;
+        color: $primaryColor;
+      }
+      .-ps {
+        .-de {
+          list-style: none;
+          color: $text;
+          text-align: start;
+          font-size: 18px;
+          margin-bottom: 12px;
+          margin-left: -20px;
+          display: inline-flex;
+          width: 100%;
+          &:before {
+            content: "\25A0";
+            color: $primaryColor;
+            font-size: 15px;
+            display: inline-block;
+            width: 10px;
+            margin-left: 0;
+            margin-right: 10px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .services {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    .service {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      //flex-direction: column !important;
+      height: auto;
+      .s-image {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+      }
+      .s-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px 20px;
+        .-name {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .services {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    .service {
+      width: 500px;
+      min-width: 500px;
+      max-width: 500px;
+      flex-direction: column !important;
+      height: auto;
+      .s-image {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+      }
+      .s-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px 20px;
+        .-name {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .services {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    .service {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      flex-direction: column !important;
+      height: auto;
+      .s-image {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+      }
+      .s-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px 20px;
+        .-name {
+
+        }
+      }
+    }
+  }
+}
