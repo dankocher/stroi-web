@@ -18,6 +18,10 @@ html, body, #root {
   //padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1140px) {
   html, body, #root {
     min-width: 100%;

@@ -25,7 +25,7 @@
       border-bottom: 1px solid white;
     }
     .home-button .text {
-      color: black !important;
+      color: $primaryColorDark !important;
     }
     * {
       color: #4c4c4c !important;
@@ -45,16 +45,17 @@
       align-items: center;
       height: 100%;
       &.m-left {
-        width: $left-width;
+        //width: $left-width;
         justify-content: flex-start;
         .home-button {
           text-decoration: none;
           height: 100%;
-          font-size: 24px;
+          font-size: 28px;
           align-items: center;
           display: inline-flex;
           cursor: pointer;
           width: 100%;
+          font-weight: 400;
           .logo {
             width: 50px;
             height: 100%;
@@ -67,6 +68,7 @@
             padding-top: 5px;
             margin-left: 10px;
             align-items: center;
+            text-decoration: none;
             display: inline-flex;
           }
         }

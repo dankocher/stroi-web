@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import sections from "../../constants/sections";
 import { Slider } from 'react-burgers'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
 import './Mobile.scss';
 
 class Mobile extends Component {
@@ -29,26 +26,3 @@ class Mobile extends Component {
 }
 
 export default Mobile;
-
-
-const Separator = () => {
-    return <div className={'separator'}>•</div>
-};
-
-const Phone = (props) => {
-    return <div className="phone">
-        <div className="text">8 (029) 123 45 67</div>
-        <FontAwesomeIcon icon={faPhoneAlt} size={'10x'}
-                         style={{
-                             display: 'flex',
-                             justifyContent: 'center',
-                             alignItems: 'center',
-                             border: '2px solid ' + (props.scrolled ? '#4c4c4c' : 'white'),
-                             padding: 8,
-                             width: 24,
-                             height: 24,
-                             verticalAlign: 'middle',
-                             borderRadius: '50%'
-                         }}/>
-    </div>
-}

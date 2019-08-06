@@ -2,10 +2,11 @@ import React from 'react';
 import './styles/App.scss';
 import Menu from './components/Menu';
 import Content from "./components/Content";
-import Header from "./components/Header";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import MobileMenu from "./components/Menu/MobileMenu";
 import { isMobile } from "react-device-detect";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 class App extends React.Component {
     lastWidth = 0;
@@ -15,11 +16,9 @@ class App extends React.Component {
             showMenu: false,
             width: 0,
             height: 0,
-            scrollTop: 0,
-            page: ''
+            page: 'home'
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-        this.handleScroll = this.handleScroll.bind(this);
     }
 
     showMenu = async () => {
@@ -50,16 +49,12 @@ class App extends React.Component {
 
     componentDidMount() {
         this.updateWindowDimensions();
-        this.startPage();
+        // this.startPage();
         window.addEventListener('resize', this.updateWindowDimensions);
-        window.addEventListener('scroll', this.handleScroll);
-        window.addEventListener("hashchange", this.startPage);
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimensions);
-        window.removeEventListener('scroll', this.handleScroll);
-        window.removeEventListener("hashchange", this.startPage);
     }
 
     updateWindowDimensions() {
@@ -70,31 +65,48 @@ class App extends React.Component {
         this.setState({ width, height });
     }
 
-    handleScroll = () => {
-        let scrollTop = window.scrollY;
-        this.setState({scrollTop});
-        if (scrollTop === 0) {
-            this.setState({page: ""})
+    getScreen = (page, params) => {
+
+        if (this.state.page !== page)
+            this.setState({page});
+
+        const {width, height, showMenu} = this.state;
+        switch (page) {
+            case 'home': return <Home {...params} setPage={this.setPage}/>;
+            case 'services':
+            case 'about':
+            case 'contacts':
+            case 'call-me':
+                return <Content {...params} width={width} height={height} showMenu={showMenu} setPage={this.setPage} page={page}/>;
+            default: return <div className={'section'} style={{minHeight: height - 260}}> <div>404</div> </div>;
         }
     };
 
-    startPage = () => {
-        this.setState({page: window.location.hash.replace("#", "")});
-    };
-
     render() {
-        const {page, width, height, scrollTop, showMenu} = this.state;
+        const {page, width, height, showMenu} = this.state;
 
         return (
-            <div className="App" ref={app => this.app = app}>
-                <Menu scrollTop={scrollTop} page={page} width={width} height={height}
-                      show={showMenu} showMenu={this.showMenu} hideMenu={this.hideMenu}/>
-                <MobileMenu scrollTop={scrollTop} height={height} width={width} page={page}
-                            show={showMenu} showMenu={this.showMenu}/>
-                <Header width={width} height={height} showMenu={showMenu}/>
-                <Content height={height}/>
-                <Footer/>
-            </div>
+
+            <Router>
+                <div className="App" ref={app => this.app = app}>
+                        <div className="menu-container">
+                            <Menu page={page} width={width} height={height}
+                                  show={showMenu} showMenu={this.showMenu} hideMenu={this.hideMenu}/>
+                            <MobileMenu page={page} height={height} width={width}
+                                        show={showMenu} showMenu={this.showMenu}/>
+                        </div>
+
+                        <Switch>
+                            <Route path="/" exact component={() => this.getScreen('home', {width, height, showMenu})}/>
+                            <Route path="/services" component={() => this.getScreen('services')}/>
+                            <Route path="/about" component={() => this.getScreen('about')}/>
+                            <Route path="/contacts" component={() => this.getScreen('contacts')}/>
+                            <Route path="/call-me" component={() => this.getScreen('call-me')}/>
+                            <Route status={404} component={() => this.getScreen('not-found')}/>
+                        </Switch>
+                    <Footer/>
+                </div>
+            </Router>
         );
     }
 }

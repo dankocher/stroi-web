@@ -1,20 +1,17 @@
 @import '../../styles/variables';
 
 .--m.--desk.m-right {
-  width: 'calc(100% - '$left-width')';
   flex: 1;
   justify-content: flex-end;
   align-items: center;
   .m-buttons {
     display: inline-flex;
     //height: 100%;
-    margin-right: 50px;
-    .m-b-dot {
-      display: inline-flex;
+    margin-right: 15px;
       .menu-button {
         user-select: none;
         cursor: pointer;
-        margin: 5px;
+        margin: 5px 5px 5px 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,7 +26,6 @@
           border-bottom: 2px solid $primaryColor;
         }
       }
-    }
   }
   .phone {
     cursor: pointer;

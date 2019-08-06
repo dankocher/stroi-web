@@ -3,4 +3,11 @@
 .App {
   text-align: center;
   background-color: #f8f8f8;
+  .section {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+  }
 }

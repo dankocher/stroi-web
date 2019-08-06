@@ -32,14 +32,18 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: $menu-translucent;
+  background-color: $menu-translucent-show;
   right: calc(-100% - 50px);
-  top: 91px;
+  //top: 91px;
+  padding-top: 91px;
+  top: 0;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
   transition: right 250ms ease-in-out, top 250ms ease-in-out;
   padding-bottom: 40px;
   &.-s {
-    top: 61px;
+    //top: 61px;
+    padding-top: 61px;
+    top: 0;
     background: white;
     .m-b-dot {
       .menu-button {
