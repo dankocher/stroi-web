@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from '../../../assets/images/logo.svg';
+import logo from '../../../assets/images/logo-primary.svg';
 import './Contacts.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +14,7 @@ class Contacts extends Component {
             <div className="contacts">
                 <div className="s-logo">
                     <img src={logo} className={'-logo'} alt={'company name'}/>
-                    <div className="-text">СТРОЙ УСЛУГИ</div>
+                    <div className="-text">Название Компании</div>
                 </div>
                 <div className="s-contacts">
                     <Title text={'Контакты'}/>
@@ -46,20 +46,20 @@ class Contacts extends Component {
 
 export default Contacts;
 
-
+const iconColor = '#0288d1';
 const Title = props => {
     return <div className="c-title">{props.text}</div>;
 };
 
 const Contact = props => {
     return <div className="c-contact">
-        <FontAwesomeIcon icon={props.type} style={{color: '#DB9B03', fontSize: 18, marginRight: 15, width: 15}}/>
+        <FontAwesomeIcon icon={props.type} style={{color: iconColor, fontSize: 18, marginRight: 15, width: 15}}/>
         {props.text}
     </div>;
 };
 
 const SocialIcon = props => {
     return <div className={'c-social'}>
-        <FontAwesomeIcon icon={props.type} style={{color: '#DB9B03', fontSize: 24, height: 24, width: 24}}/>
+        <FontAwesomeIcon icon={props.type} style={{color: iconColor, fontSize: 24, height: 24, width: 24}}/>
     </div>
 };
