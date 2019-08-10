@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faVk, faInstagram, faViber, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import ButtonCallMe from "../../ButtonCallMe";
+import CallMe from "./CallMe";
 
 class Contacts extends Component {
 
@@ -12,10 +13,6 @@ class Contacts extends Component {
     render() {
         return (
             <div className="contacts">
-                <div className="s-logo">
-                    <img src={logo} className={'-logo'} alt={'company name'}/>
-                    <div className="-text">Название Компании</div>
-                </div>
                 <div className="s-contacts">
                     <Title text={'Контакты'}/>
                     <Contact type={faMapMarkerAlt} text={'г. Минск. ул. Сурганова, д. 123'}/>
@@ -23,22 +20,10 @@ class Contacts extends Component {
                     <Contact type={faPhone} text={'8 (033) 789 65-21'}/>
                     <Contact type={faEnvelope} text={'stroiuslugiminsk@gmail.com'}/>
 
-                    <Title text={'Мы в социальных сетях'}/>
-                    <div className="c-socials">
-                        <SocialIcon type={faVk}/>
-                        <SocialIcon type={faInstagram}/>
-                        <SocialIcon type={faFacebookSquare}/>
-                    </div>
-
-                    <Title text={'Свяжитесь с нами'}/>
-                    <div className="c-socials">
-                        <SocialIcon type={faViber}/>
-                        <SocialIcon type={faTelegram}/>
-                        <SocialIcon type={faWhatsapp}/>
-                    </div>
-
-                    <ButtonCallMe/>
                 </div>
+
+                <CallMe/>
+
             </div>
         );
     }

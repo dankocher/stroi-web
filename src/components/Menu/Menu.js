@@ -10,14 +10,17 @@ class Menu extends Component {
 
     render() {
         const {page, scrollTop, width, height, show} = this.props;
-        const scrolled = page !== 'home' ? ' --bg' : "";
+        // const scrolled = page !== 'home' ? ' --bg' : "";
+        const scrolled = ' --bg';
+        // const logo = page === "home" ? logoWhite : logoPrimary;
+        const logo = logoPrimary;
 
         return <nav className={`menu${scrolled}${show ? ' -m-show' : ''}`} >
             <div className="menu-content">
                 <div className="--m m-left">
                         <Link to="/">
                             <div className="home-button">
-                                <img src={page === "home" ? logoWhite : logoPrimary} className='logo' alt={'Logo'}/>
+                                <img src={logo} className='logo' alt={'Logo'}/>
                                 <div className="text">Компания</div>
                             </div>
                         </Link>

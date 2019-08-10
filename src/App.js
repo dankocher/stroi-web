@@ -6,7 +6,8 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import MobileMenu from "./components/Menu/MobileMenu";
 import { isMobile } from "react-device-detect";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import Service from "./components/Content/Sections/Service";
 
 class App extends React.Component {
     lastWidth = 0;
@@ -65,19 +66,21 @@ class App extends React.Component {
         this.setState({ width, height });
     }
 
-    getScreen = (page, params) => {
+    getScreen = (page, params, service) => {
 
         if (this.state.page !== page)
             this.setState({page});
 
+        console.log(service)
         const {width, height, showMenu} = this.state;
         switch (page) {
             case 'home': return <Home {...params} setPage={this.setPage}/>;
+            case 'service':
             case 'services':
+            case 'certificates':
             case 'about':
             case 'contacts':
-            case 'call-me':
-                return <Content {...params} width={width} height={height} showMenu={showMenu} setPage={this.setPage} page={page}/>;
+                return <Content {...params} width={width} height={height} showMenu={showMenu} setPage={this.setPage} page={page} service={service}/>;
             default: return <div className={'section'} style={{minHeight: height - 260}}> <div>404</div> </div>;
         }
     };
@@ -98,10 +101,13 @@ class App extends React.Component {
 
                         <Switch>
                             <Route path="/" exact component={() => this.getScreen('home', {width, height, showMenu})}/>
-                            <Route path="/services" component={() => this.getScreen('services')}/>
+                            <Route path="/services" exact component={() => this.getScreen('services')}/>
+                            <Redirect from="/service" exact to={'/services'}/>
+                            <Route path="/service/:service" component={(__target) => this.getScreen('service', {}, __target.match.params.service)}/>
+                            <Redirect from="/services/:service" to={'/service/:service'}/>
+                            <Route path="/certificates" component={() => this.getScreen('certificates')}/>
                             <Route path="/about" component={() => this.getScreen('about')}/>
                             <Route path="/contacts" component={() => this.getScreen('contacts')}/>
-                            <Route path="/call-me" component={() => this.getScreen('call-me')}/>
                             <Route status={404} component={() => this.getScreen('not-found')}/>
                         </Switch>
                     <Footer/>

@@ -5,24 +5,13 @@ $logoSize: 400px;
   width: 1100px;
   display: flex;
   min-height: 400px;
-  .s-logo {
-    width: $logoSize;
-    .-logo {
-      width: 200px;
-    }
-    .-text {
-      color: $primaryColor;
-      font-size: 32px;
-      font-weight: bold;
-    }
-  }
   .s-contacts {
-    width: 'calc(100% - '$logoSize')';
-    padding: 10px 10px 10px 150px;
+    padding: 10px 10px 10px 10px;
     box-sizing: border-box;
     justify-content: flex-start;
     align-items: flex-start;
     display: flex;
+    flex: 1;
     //color: $text;
     color: gray;
     flex-direction: column;
@@ -110,6 +99,7 @@ $logoSize: 400px;
     }
     .s-contacts {
       max-width: 100%;
+      margin-bottom: 70px;
     }
   }
 }
