@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Desktop from "./Desktop";
 import Mobile from "./Mobile";
 
+const MIN_WIDTH = 700;
+
 class Menu extends Component {
 
     render() {
@@ -26,7 +28,7 @@ class Menu extends Component {
                         </Link>
                 </div>
                 {
-                    width < 1140 ?
+                    width < MIN_WIDTH ?
                         <Mobile page={page} scrolled={page !== 'home'} scrollTop={scrollTop} width={width} height={height}
                                 show={show} showMenu={this.props.showMenu}/>
                         :

@@ -8,7 +8,8 @@ class MobileMenu extends Component {
 
     render() {
         const {page, scrollTop, show, height, width} = this.props;
-        const scrolled = page !== 'home' ? ' -s' : "";
+        // const scrolled = page !== 'home' ? ' -s' : "";
+        const scrolled = ' -s';
         return (
             <div className={`m-menu${scrolled}${show ? ' -show' : ''}`}
                  style={{height: width < 500 ? '100%' : 'auto'}}

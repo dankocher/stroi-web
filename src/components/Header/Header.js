@@ -6,7 +6,7 @@ const IMG_WIDTH = 6500;
 const IMG_HEIGHT = 4200;
 const IMG_ASPECT_RATIO = IMG_WIDTH / IMG_HEIGHT;
 
-class Home extends React.Component {
+class Header extends React.Component {
 
     state = {
         pictureWidth: 'auto',
@@ -60,4 +60,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Header;

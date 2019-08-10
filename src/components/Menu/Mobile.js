@@ -15,7 +15,7 @@ class Mobile extends Component {
                         onClick={() => {this.props.showMenu()}}
                         width={32}
                         lineSpacing={7}
-                        color={scrolled ? '#4c4c4c' : 'white'}
+                        color={'#4c4c4c'}
                     />
                 </div>
 

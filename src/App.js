@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/App.scss';
 import Menu from './components/Menu';
 import Content from "./components/Content";
-import Home from "./components/Home";
+import Home from "./components/Home.js";
 import Footer from "./components/Footer";
 import MobileMenu from "./components/Menu/MobileMenu";
 import { isMobile } from "react-device-detect";
@@ -71,7 +71,6 @@ class App extends React.Component {
         if (this.state.page !== page)
             this.setState({page});
 
-        console.log(service)
         const {width, height, showMenu} = this.state;
         switch (page) {
             case 'home': return <Home {...params} setPage={this.setPage}/>;
