@@ -11,11 +11,12 @@ configureAnchors({offset: -60, scrollDuration: 400});
 class Content extends Component {
 
     getSection = (page, service) => {
+        window.scrollTo(0, 0);
         switch (page) {
-            case 'services': return <Services/>;
-            case 'service': return <Service service={service}/>;
-            case 'about': return <About/>;
-            case 'contacts': return <Contacts/>;
+            case 'services': return <Services {...this.props}/>;
+            case 'service': return <Service service={service} {...this.props}/>;
+            case 'about': return <About {...this.props}/>;
+            case 'contacts': return <Contacts {...this.props}/>;
             case 'certificates': return <CertificatesScreen {...this.props} showDescription={true}/>;
             default: return page;
         }

@@ -10,6 +10,10 @@ import CertificatesScreen from "../Certificates/CertificatesScreen";
 
 class Main extends React.Component {
 
+    componentWillMount() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div className={'main'}>

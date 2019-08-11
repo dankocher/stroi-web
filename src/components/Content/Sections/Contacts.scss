@@ -2,7 +2,8 @@
 $logoSize: 400px;
 
 .contacts {
-  width: 1100px;
+  max-width: $min-width;
+  width: 100%;
   display: flex;
   min-height: 400px;
   margin: 100px 0 150px;
@@ -73,7 +74,8 @@ $logoSize: 400px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 0;
+    //margin-left: 0;
+    margin: 0 0 100px;
     .s-logo {
       width: 100%;
       flex-direction: column;

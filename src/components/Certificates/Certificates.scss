@@ -2,7 +2,7 @@
 
 .certificates-screen {
   width: 100%;
-  max-width: $min-width + 100;
+  max-width: $min-width;
   //margin: 50px 0 0;
   .cert-description {
     margin: 20px 50px;
@@ -13,7 +13,7 @@
 }
 .certificates {
   width: 100%;
-  max-width: $min-width + 100;
+  max-width: $min-width;
   height: 360px;
   margin: 50px 0 0;
   .title {

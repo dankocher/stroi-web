@@ -39,7 +39,7 @@ class CallMe extends Component {
 
         return (
             <div className="call-me">
-                <BgDots/>
+                {/*<BgDots/>*/}
                 {
                     sent ?
                         <div className="cm-content">
