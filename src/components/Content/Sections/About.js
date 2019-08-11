@@ -8,7 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import CertificatesScreen from "../../Certificates/CertificatesScreen";
 import banner from "../../Main/images/banner.jpg";
-import Paragraph from "../../Pharagraph";
+import Paragraph from "../../Paragraph";
 import data from "../../Main/main";
 
 class About extends Component {

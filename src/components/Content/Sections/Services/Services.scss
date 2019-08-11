@@ -1,39 +1,55 @@
 @import '../../../../styles/variables';
 
+$serviceHeight: 200px;
+$pictureWidth: $serviceHeight * 500/400;
+
 .services {
   width: 100%;
-  min-width: $min-width;
-  max-width: $max-width + 20;
+  min-width: 760px;
+  max-width: 960px;
   margin: 0 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  .services-int {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
   .service {
-    width: 1100px;
-    height: 400px;
-    //border: 1px solid gray;
-    margin: 50px 0;
+    width: 100%;
+    min-width: 760px;
+    max-width: 960px;
+    height: $serviceHeight;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    //margin: 50px 0;
     display: flex;
     justify-content: left;
     position: relative;
+    margin-bottom: 20px;
+    background-color: white;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
     .s-image {
-      width: 500px;
-      height: 400px;
-      border: 10px solid $primaryColor;
+      width: $pictureWidth;
+      //height: $serviceHeight;
+      //height: 400px;
+      //border: 10px solid $primaryColor;
       z-index: 2;
     }
     .s-content {
       z-index: 1;
-      background-color: white;
-      width: calc(100% - 500px);
+      width: 100%;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       padding: 25px 40px;
       flex-direction: column;
-      margin-bottom: 20px;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
       .-name {
         font-size: 28px;
         font-weight: bold;
@@ -62,39 +78,20 @@
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-
-  .services {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    .service {
-      width: 100%;
-      min-width: 100%;
-      max-width: 100%;
-      //flex-direction: column !important;
-      height: auto;
-      .s-image {
-        width: 100%;
-        box-sizing: border-box;
-        height: auto;
-      }
-      .s-content {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 25px 20px;
-        .-name {
-
-        }
+    .-button {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      color: $primaryColor;
+      z-index: 3;
+      &:hover {
+        color: $primaryColorLight;
       }
     }
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 760px) {
 
   .services {
     width: 100%;
@@ -135,6 +132,8 @@
       max-width: 100%;
       flex-direction: column !important;
       height: auto;
+      border-left: none;
+      border-right: none;
       .s-image {
         width: 100%;
         box-sizing: border-box;

@@ -5,7 +5,7 @@ import services from '../../constants/services';
 
 import data from './main';
 import {Link} from "react-router-dom";
-import Paragraph from "../Pharagraph";
+import Paragraph from "../Paragraph";
 import CertificatesScreen from "../Certificates/CertificatesScreen";
 
 class Main extends React.Component {

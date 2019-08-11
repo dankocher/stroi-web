@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Pharagraph = props => {
+const Paragraph = props => {
     return (
         <p {...props} dangerouslySetInnerHTML={{__html: props.text}}/>
     );
 };
 
-export default Pharagraph;
+export default Paragraph;
