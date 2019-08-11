@@ -10,13 +10,15 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom
 
 class App extends React.Component {
     lastWidth = 0;
+    lastService = null;
     constructor(props) {
         super(props);
         this.state = {
             showMenu: false,
             width: 0,
             height: 0,
-            page: 'home'
+            page: 'home',
+            selectedService: null
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -71,6 +73,15 @@ class App extends React.Component {
             this.setState({page});
 
         const {width, height, showMenu} = this.state;
+
+        if (service !== this.lastService) {
+            this.lastService = service;
+            this.setService(page, service);
+            // setTimeout(() => {
+            // }, 50);
+        }
+
+
         switch (page) {
             case 'home': return <Home {...params} width={width} height={height} setPage={this.setPage}/>;
             case 'service':
@@ -83,6 +94,14 @@ class App extends React.Component {
         }
     };
 
+    setService = (page, service) => {
+        if (page === "service") {
+            this.setState({selectedService: service})
+        } else {
+            this.setState({selectedService: null})
+        }
+    };
+
     render() {
         const {page, width, height, showMenu} = this.state;
 
@@ -92,9 +111,10 @@ class App extends React.Component {
                 <div className="App" ref={app => this.app = app}>
                         <div className="menu-container">
                             <Menu page={page} width={width} height={height}
-                                  show={showMenu} showMenu={this.showMenu} hideMenu={this.hideMenu}/>
+                                  show={showMenu} showMenu={this.showMenu}
+                                  hideMenu={this.hideMenu} service={this.state.selectedService}/>
                             <MobileMenu page={page} height={height} width={width}
-                                        show={showMenu} showMenu={this.showMenu}/>
+                                        show={showMenu} showMenu={this.showMenu} service={this.state.selectedService}/>
                         </div>
 
                         <Switch>

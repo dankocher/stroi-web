@@ -14,6 +14,7 @@
   transition: all 250ms ease-in-out;
   z-index: 1001;
   border-bottom: 1px solid rgba(255, 255, 255, .1);
+  //box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   &.-m-show {
     border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
@@ -27,9 +28,9 @@
     .home-button .text {
       color: $primaryColor !important;
     }
-    * {
-      color: #4c4c4c !important;
-    }
+    //* {
+    //  color: #4c4c4c !important;
+    //}
   }
   .menu-content {
     max-width: $max-width;

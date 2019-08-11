@@ -11,7 +11,7 @@ const MIN_WIDTH = 700;
 class Menu extends Component {
 
     render() {
-        const {page, scrollTop, width, height, show} = this.props;
+        const {page, scrollTop, width, height, show, service} = this.props;
         // const scrolled = page !== 'home' ? ' --bg' : "";
         const scrolled = ' --bg';
         // const logo = page === "home" ? logoWhite : logoPrimary;
@@ -30,9 +30,9 @@ class Menu extends Component {
                 {
                     width < MIN_WIDTH ?
                         <Mobile page={page} scrolled={page !== 'home'} scrollTop={scrollTop} width={width} height={height}
-                                show={show} showMenu={this.props.showMenu}/>
+                                show={show} showMenu={this.props.showMenu} service={service}/>
                         :
-                        <Desktop page={page} scrolled={page !== 'home'} scrollTop={scrollTop} width={width}/>
+                        <Desktop page={page} scrolled={page !== 'home'} scrollTop={scrollTop} width={width} service={service}/>
                 }
             </div>
         </nav>

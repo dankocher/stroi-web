@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import sections from "../../constants/sections";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import services from "../../constants/services";
 
 class MobileMenu extends Component {
 
     render() {
-        const {page, scrollTop, show, height, width} = this.props;
+        const {page, scrollTop, show, height, width, service} = this.props;
         // const scrolled = page !== 'home' ? ' -s' : "";
         const scrolled = ' -s';
         return (
@@ -16,12 +15,30 @@ class MobileMenu extends Component {
             >
                 {
                     sections.map((section, index) => (
-                        <Link key={`m-section-${index}`} className={'m-b-dot'} to={`/${section.alias}`}>
-                            <div className={`menu-button ${page === section.alias ? ' -selected' : ""}`}
-                               onClick={this.props.showMenu}>{
-                                section.name
-                            }</div>
-                        </Link>
+                        <div className="m-list-item">
+                            <Link key={`m-section-${index}`} className={'m-b-dot'} to={`/${section.alias}`}>
+                                <div className={`menu-button ${page === section.alias ? ' -selected' : ""}`}
+                                     onClick={this.props.showMenu}>{
+                                    section.name
+                                }</div>
+                            </Link>
+                            {
+                                section.alias !== "services" ? null :
+                                    <div className={`m-services-list`}>
+                                        <div className="list-container">
+                                            <div className="before-sep"/>
+                                            {
+                                                services.map((s, i) => (
+                                                    <Link key={`service-${i}`} to={`/service/${s.alias}`}>
+                                                        <div className={`s-item${service === s.alias ? " -selected": ""}`}
+                                                             onClick={this.props.showMenu}>{s.name}</div>
+                                                    </Link>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                            }
+                        </div>
                     ))
                 }
             </div>

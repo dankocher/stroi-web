@@ -8,6 +8,15 @@
     display: inline-flex;
     //height: 100%;
     margin-right: 15px;
+    .m-section {
+      &:hover {
+        .menu-button {
+          color: $primaryColor
+        }
+        .m-services-list {
+          display: block;
+        }
+      }
       .menu-button {
         user-select: none;
         cursor: pointer;
@@ -18,14 +27,60 @@
         height: 32px;
         font-size: 18px;
         //color: lightgray;
-        color: white;
+        color: $text;
         text-decoration: none;
         padding: 0 1px;
+        position: relative;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          color: $primaryColor;
+        }
 
         &.-selected {
+          color: $primaryColor !important;
           border-bottom: 2px solid $primaryColor;
         }
       }
+      .m-services-list {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        margin-left: -8px;
+        margin-top: 8px;
+        .list-container {
+          .before-sep {
+            height: 8px;
+            background-color: white;
+            margin-top: -15px;
+            border: 1px solid;
+            width: calc(100% + 20px);
+            margin-left: -10px;
+          }
+          background-color: white;
+          padding: 5px 0 10px;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+          border-left: 1px solid rgba(128, 128, 128, 0.1);
+          border-right: 1px solid rgba(128, 128, 128, 0.1);
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          .s-item {
+            color: $text;
+            padding: 8px 20px;
+            text-align: left;
+
+            &:hover {
+              color: $primaryColorLight;
+            }
+
+            &.-selected {
+              color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
   }
   .phone {
     cursor: pointer;
