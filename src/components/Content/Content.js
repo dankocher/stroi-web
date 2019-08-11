@@ -5,6 +5,7 @@ import Services from "./Sections/Services/Services";
 import About from "./Sections/About";
 import Contacts from "./Sections/Contacts";
 import Service from "./Sections/Service";
+import CertificatesScreen from "../Certificates/CertificatesScreen";
 configureAnchors({offset: -60, scrollDuration: 400});
 
 class Content extends Component {
@@ -15,7 +16,7 @@ class Content extends Component {
             case 'service': return <Service service={service}/>;
             case 'about': return <About/>;
             case 'contacts': return <Contacts/>;
-            case 'certificates': return <div>Certificates</div>;
+            case 'certificates': return <CertificatesScreen {...this.props} showDescription={true}/>;
             default: return page;
         }
     };

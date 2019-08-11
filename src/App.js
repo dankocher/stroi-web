@@ -73,7 +73,7 @@ class App extends React.Component {
 
         const {width, height, showMenu} = this.state;
         switch (page) {
-            case 'home': return <Home {...params} setPage={this.setPage}/>;
+            case 'home': return <Home {...params} width={width} height={height} setPage={this.setPage}/>;
             case 'service':
             case 'services':
             case 'certificates':

@@ -40,8 +40,6 @@ class Header extends React.Component {
         const {width, height, showMenu} = this.props;
         const {pictureWidth, pictureHeight} = this.state;
 
-        console.log(width, height);
-
         return <div className="header" style={{height: height}}>
             <header className="App-header">
                 <img src={banner}

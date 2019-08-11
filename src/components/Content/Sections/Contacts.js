@@ -20,6 +20,19 @@ class Contacts extends Component {
                     <Contact type={faPhone} text={'8 (033) 789 65-21'}/>
                     <Contact type={faEnvelope} text={'stroiuslugiminsk@gmail.com'}/>
 
+                    <Title text={'Мы в социальных сетях'}/>
+                    <div className="c-socials">
+                        <SocialIcon type={faVk}/>
+                        <SocialIcon type={faInstagram}/>
+                        <SocialIcon type={faFacebookSquare}/>
+                    </div>
+
+                    <Title text={'Свяжитесь с нами'}/>
+                    <div className="c-socials">
+                        <SocialIcon type={faViber}/>
+                        <SocialIcon type={faTelegram}/>
+                        <SocialIcon type={faWhatsapp}/>
+                    </div>
                 </div>
 
                 <CallMe/>

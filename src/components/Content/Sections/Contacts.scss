@@ -5,8 +5,9 @@ $logoSize: 400px;
   width: 1100px;
   display: flex;
   min-height: 400px;
+  margin: 100px 0 150px;
   .s-contacts {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 100px;
     box-sizing: border-box;
     justify-content: flex-start;
     align-items: flex-start;
@@ -21,6 +22,8 @@ $logoSize: 400px;
       margin-top: 25px;
       &:first-child {
         margin-top: 0;
+        font-size: 28px;
+        color: $primaryColor;
       }
     }
     .c-contact, .c-socials {
@@ -44,7 +47,7 @@ $logoSize: 400px;
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
   .contacts {
     .s-logo {
       display: flex;
@@ -65,11 +68,12 @@ $logoSize: 400px;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 900px) {
   .contacts {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 0;
     .s-logo {
       width: 100%;
       flex-direction: column;
@@ -78,11 +82,12 @@ $logoSize: 400px;
     }
     .s-contacts {
       display: flex;
-      flex: 1;
+      flex: 1 1;
       padding: 10px;
       width: 100%;
-      max-width: 420px;
+      max-width: 580px;
       margin-top: 30px;
+      margin-bottom: 40px;
       .c-title {
         &:first-child {
         }

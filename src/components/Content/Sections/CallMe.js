@@ -54,7 +54,7 @@ class CallMe extends Component {
                         </div>
                         :
                         <div className="cm-content">
-                            <div className="-title">Свяжитесь с нами</div>
+                            <div className="-title">Заказать обратный звонок</div>
 
                             <div className="-label">Имя:</div>
                             <input value={name} placeholder={'Введите ваше имя'} onChange={e => this.setState({name: e.target.value})}/>
