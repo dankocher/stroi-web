@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import MobileMenu from "./components/Menu/MobileMenu";
 import { isMobile } from "react-device-detect";
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
-import Service from "./components/Content/Sections/Service";
 
 class App extends React.Component {
     lastWidth = 0;

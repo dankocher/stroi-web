@@ -12,12 +12,14 @@ class Services extends Component {
                     <div className="services-int">
                         <Paragraph text={'Описание услуг. Один абзац От 420 символов. Исползовать фразы как <b>строительные услуги</b> и т.п. для продвижении сайта. Integer eu lorem sit amet turpis rutrum maximus nec non arcu. Etiam at urna eget felis laoreet sollicitudin. Fusce iaculis nulla et convallis sagittis. Praesent nibh orci, suscipit at efficitur eget, pretium at justo. Suspendisse potenti. Curabitur elit felis, mattis vitae venenatis eget, condimentum eget odio. Cras enim nunc, tincidunt at velit id, pharetra efficitur ipsum. абзац заканчивается в что-то типа перечень услуг:'}/>
                     </div>
-                    <div className="-services-min">
-                        {
-                            services.map((service, index) => (
-                                <Service key={`service-${index}`} service={service} index={index}/>
-                            ))
-                        }
+                    <div className="services-content">
+                        <div className="-services-min">
+                            {
+                                services.map((service, index) => (
+                                    <Service key={`service-${index}`} service={service} index={index}/>
+                                ))
+                            }
+                        </div>
                     </div>
                     <div className="services-int">
                         <Paragraph text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta laoreet libero, sed posuere nunc laoreet quis. Sed eleifend vitae neque vitae gravida. Sed enim nibh, volutpat sit amet ligula id, commodo tempus urna. Pellentesque eget velit in tortor egestas fringilla nec ac ante. Curabitur convallis porta nibh, id accumsan urna cursus at. Curabitur id ipsum odio. Donec ac massa nisi.'}/>
