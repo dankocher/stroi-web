@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/stroi-web/static/css/main.d8bb9de0.chunk.css",
-    "main.js": "/stroi-web/static/js/main.10e61f98.chunk.js",
-    "main.js.map": "/stroi-web/static/js/main.10e61f98.chunk.js.map",
+    "main.css": "/stroi-web/static/css/main.132115af.chunk.css",
+    "main.js": "/stroi-web/static/js/main.f247285b.chunk.js",
+    "main.js.map": "/stroi-web/static/js/main.f247285b.chunk.js.map",
     "runtime-main.js": "/stroi-web/static/js/runtime-main.a7a2b761.js",
     "runtime-main.js.map": "/stroi-web/static/js/runtime-main.a7a2b761.js.map",
-    "static/js/2.7bec55fa.chunk.js": "/stroi-web/static/js/2.7bec55fa.chunk.js",
-    "static/js/2.7bec55fa.chunk.js.map": "/stroi-web/static/js/2.7bec55fa.chunk.js.map",
+    "static/js/2.ff550cb1.chunk.js": "/stroi-web/static/js/2.ff550cb1.chunk.js",
+    "static/js/2.ff550cb1.chunk.js.map": "/stroi-web/static/js/2.ff550cb1.chunk.js.map",
     "index.html": "/stroi-web/index.html",
-    "static/css/main.d8bb9de0.chunk.css.map": "/stroi-web/static/css/main.d8bb9de0.chunk.css.map",
-    "static/js/2.7bec55fa.chunk.js.LICENSE.txt": "/stroi-web/static/js/2.7bec55fa.chunk.js.LICENSE.txt",
+    "static/css/main.132115af.chunk.css.map": "/stroi-web/static/css/main.132115af.chunk.css.map",
+    "static/js/2.ff550cb1.chunk.js.LICENSE.txt": "/stroi-web/static/js/2.ff550cb1.chunk.js.LICENSE.txt",
     "static/media/001.6d21c568.jpg": "/stroi-web/static/media/001.6d21c568.jpg",
     "static/media/001.b409635b.jpg": "/stroi-web/static/media/001.b409635b.jpg",
     "static/media/002.77b6b4d1.jpg": "/stroi-web/static/media/002.77b6b4d1.jpg",
@@ -28,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a7a2b761.js",
-    "static/js/2.7bec55fa.chunk.js",
-    "static/css/main.d8bb9de0.chunk.css",
-    "static/js/main.10e61f98.chunk.js"
+    "static/js/2.ff550cb1.chunk.js",
+    "static/css/main.132115af.chunk.css",
+    "static/js/main.f247285b.chunk.js"
   ]
 }
