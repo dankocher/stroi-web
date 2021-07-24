@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import InputMask from 'react-input-mask';
-import BgDots from "../../BgDots/BgDots";
+// import BgDots from "../../BgDots/BgDots";
 import './CallMe.scss';
 import { TelegramClient } from 'messaging-api-telegram';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

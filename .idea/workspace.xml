@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808b98b5-477f-4244-95ad-dae9810cdb05" name="Default Changelist" comment="Ready!">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/square.png" afterDir="false" />
+    <list default="true" id="808b98b5-477f-4244-95ad-dae9810cdb05" name="Default Changelist" comment="Fixed for gh-pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/square.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/square.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BgDots/BgDots.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BgDots/BgDots.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Certificates/Certificates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Certificates/Certificates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Certificates/CertificatesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Certificates/CertificatesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Certificates/certificates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Certificates/certificate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Sections/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Sections/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +208,7 @@
       <recent name="$PROJECT_DIR$/src/constants/services" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -233,6 +223,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -244,8 +244,20 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -264,7 +276,7 @@
       <workItem from="1565087951643" duration="13287000" />
       <workItem from="1565431674980" duration="66790000" />
       <workItem from="1626876841940" duration="154000" />
-      <workItem from="1627154242848" duration="2693000" />
+      <workItem from="1627154242848" duration="3171000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Structure">
       <created>1565441391784</created>
@@ -315,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565552512399</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed for gh-pages">
+      <created>1627157021025</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627157021025</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -367,7 +386,8 @@
     <MESSAGE value="Added Services" />
     <MESSAGE value="Show Service" />
     <MESSAGE value="Ready!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready!" />
+    <MESSAGE value="Fixed for gh-pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed for gh-pages" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/styles/App.scss">
