@@ -107,7 +107,7 @@ class App extends React.Component {
 
         return (
 
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <div className="App" ref={app => this.app = app}>
                         <div className="menu-container">
                             <Menu page={page} width={width} height={height}

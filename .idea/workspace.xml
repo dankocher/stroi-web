@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808b98b5-477f-4244-95ad-dae9810cdb05" name="Default Changelist" comment="Fixed for gh-pages">
+    <list default="true" id="808b98b5-477f-4244-95ad-dae9810cdb05" name="Default Changelist" comment="Fixe font">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Sections/CallMe.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +274,7 @@
       <workItem from="1565087951643" duration="13287000" />
       <workItem from="1565431674980" duration="66790000" />
       <workItem from="1626876841940" duration="154000" />
-      <workItem from="1627154242848" duration="3171000" />
+      <workItem from="1627154242848" duration="3576000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Structure">
       <created>1565441391784</created>
@@ -334,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627157021025</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixe font">
+      <created>1627157597874</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627157597874</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -387,7 +392,8 @@
     <MESSAGE value="Show Service" />
     <MESSAGE value="Ready!" />
     <MESSAGE value="Fixed for gh-pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed for gh-pages" />
+    <MESSAGE value="Fixe font" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixe font" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/styles/App.scss">
