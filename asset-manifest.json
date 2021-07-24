@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/stroi-web/static/css/main.d8bb9de0.chunk.css",
+    "main.js": "/stroi-web/static/js/main.10e61f98.chunk.js",
+    "main.js.map": "/stroi-web/static/js/main.10e61f98.chunk.js.map",
+    "runtime-main.js": "/stroi-web/static/js/runtime-main.a7a2b761.js",
+    "runtime-main.js.map": "/stroi-web/static/js/runtime-main.a7a2b761.js.map",
+    "static/js/2.7bec55fa.chunk.js": "/stroi-web/static/js/2.7bec55fa.chunk.js",
+    "static/js/2.7bec55fa.chunk.js.map": "/stroi-web/static/js/2.7bec55fa.chunk.js.map",
+    "index.html": "/stroi-web/index.html",
+    "static/css/main.d8bb9de0.chunk.css.map": "/stroi-web/static/css/main.d8bb9de0.chunk.css.map",
+    "static/js/2.7bec55fa.chunk.js.LICENSE.txt": "/stroi-web/static/js/2.7bec55fa.chunk.js.LICENSE.txt",
+    "static/media/001.6d21c568.jpg": "/stroi-web/static/media/001.6d21c568.jpg",
+    "static/media/001.b409635b.jpg": "/stroi-web/static/media/001.b409635b.jpg",
+    "static/media/002.77b6b4d1.jpg": "/stroi-web/static/media/002.77b6b4d1.jpg",
+    "static/media/002.f0f922ca.jpg": "/stroi-web/static/media/002.f0f922ca.jpg",
+    "static/media/003.3af666a6.jpg": "/stroi-web/static/media/003.3af666a6.jpg",
+    "static/media/003.ae25ae83.jpg": "/stroi-web/static/media/003.ae25ae83.jpg",
+    "static/media/004.78aa07f5.jpg": "/stroi-web/static/media/004.78aa07f5.jpg",
+    "static/media/004.aaa4b2fe.jpg": "/stroi-web/static/media/004.aaa4b2fe.jpg",
+    "static/media/005.55e70378.jpg": "/stroi-web/static/media/005.55e70378.jpg",
+    "static/media/005.e312ed6a.jpg": "/stroi-web/static/media/005.e312ed6a.jpg",
+    "static/media/006.79712bf0.jpg": "/stroi-web/static/media/006.79712bf0.jpg",
+    "static/media/007.c8785471.jpg": "/stroi-web/static/media/007.c8785471.jpg",
+    "static/media/banner.87ddd05a.jpg": "/stroi-web/static/media/banner.87ddd05a.jpg",
+    "static/media/logo-primary.fd6b8309.svg": "/stroi-web/static/media/logo-primary.fd6b8309.svg",
+    "static/media/logo-white.cf7c7086.svg": "/stroi-web/static/media/logo-white.cf7c7086.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7a2b761.js",
+    "static/js/2.7bec55fa.chunk.js",
+    "static/css/main.d8bb9de0.chunk.css",
+    "static/js/main.10e61f98.chunk.js"
+  ]
+}
