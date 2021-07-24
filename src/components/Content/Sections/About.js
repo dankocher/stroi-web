@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import './About.scss';
-import BgDots from "../../BgDots/BgDots";
+// import BgDots from "../../BgDots/BgDots";
 
-import about01 from '../../../assets/images/about01.jpg';
-import about02 from '../../../assets/images/about02.jpg';
+// import about01 from '../../../assets/images/about01.jpg';
+// import about02 from '../../../assets/images/about02.jpg';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import CertificatesScreen from "../../Certificates/CertificatesScreen";
 import banner from "../../Main/images/banner.jpg";
 import Paragraph from "../../Paragraph";
-import data from "../../Main/main";
+// import data from "../../Main/main.";
 
 class About extends Component {
 

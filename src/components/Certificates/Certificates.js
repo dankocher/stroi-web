@@ -4,7 +4,7 @@ import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { ViewPager, Frame, Track, View } from 'react-view-pager'
 
-import certificates from './certificates';
+import certificate from './certificate';
 import ModalCertificate from "./ModalCertificate";
 
 const MIN_WIDTH = 220;
@@ -28,7 +28,7 @@ class Certificates extends React.Component {
 
     componentDidMount() {
         this.startWidth(this.props.width);
-        this.setState({total: certificates.length});
+        this.setState({total: certificate.length});
         this.drag = false;
     }
 
@@ -85,7 +85,7 @@ class Certificates extends React.Component {
         if(this.drag) return;
 
         this.setState({
-            modalItem: certificates[i],
+            modalItem: certificate[i],
             modalX: this.carousel.offsetLeft + event.target.offsetLeft + 50,
             modalY: this.carousel.offsetTop
         });
@@ -126,7 +126,7 @@ class Certificates extends React.Component {
                                 onSwipeEnd={this.endDrag}
                             >
                                 {
-                                    certificates.map((d, i) => (
+                                    certificate.map((d, i) => (
                                         <View className="item" key={`item-${i}`} style={{width: itemWidth}}>
                                             <img src={d.image} alt={d.name}
                                                  onClick={event => this.showItem(i, event)}

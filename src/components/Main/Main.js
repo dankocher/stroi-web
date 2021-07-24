@@ -3,7 +3,7 @@ import './Main.scss';
 import banner from './images/banner.jpg';
 import services from '../../constants/services';
 
-import data from './main';
+import data from './main.json';
 import {Link} from "react-router-dom";
 import Paragraph from "../Paragraph";
 import CertificatesScreen from "../Certificates/CertificatesScreen";
